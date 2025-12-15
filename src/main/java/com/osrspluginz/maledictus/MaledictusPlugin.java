@@ -241,8 +241,8 @@ public class MaledictusPlugin extends Plugin
         // Check for Maledictus spawn announcement
         if (event.getType() == ChatMessageType.GAMEMESSAGE)
         {
-            // Use startsWith to correctly capture the message regardless of the location text that follows
-            if (event.getMessage().startsWith("A superior revenant has been awoken"))
+            // Use contains to correctly capture the message regardless of the location text that follows
+            if (event.getMessage().contains("A superior revenant has been awoken"))
             {
                 if (client.getGameState() == GameState.LOGGED_IN)
                 {
